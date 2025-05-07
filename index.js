@@ -17,7 +17,9 @@ const PORT = process.env.PORT ;
 
 // Middleware
 app.use(cors({
-  origin: 'https://the-paxful.netlify.app', // or your frontend URL
+  // origin: 'http://localhost:3000', // or your frontend URL
+  // origin: 'https://the-paxful.netlify.app',
+  origin: 'https://trading-client.onrender.com',
   credentials: true,
 })); // CORS setup
 app.use(express.json()); // Parse JSON bodies

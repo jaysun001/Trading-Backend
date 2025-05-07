@@ -16,7 +16,10 @@ const app = express();
 const PORT = process.env.PORT ;
 
 // Middleware
-app.use(cors()); // CORS setup
+app.use(cors({
+  origin: 'http://localhost:3000', // or your frontend URL
+  credentials: true,
+})); // CORS setup
 app.use(express.json()); // Parse JSON bodies
 app.use(express.urlencoded({ extended: true })); // Parse URL-encoded bodies
 

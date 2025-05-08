@@ -16,12 +16,14 @@ const app = express();
 const PORT = process.env.PORT ;
 
 // Middleware
-app.use(cors({
-  // origin: 'http://localhost:3000', // or your frontend URL
-  // origin: 'https://the-paxful.netlify.app',
-  origin: 'https://3.6.126.103:3000',
-  credentials: false,
-})); // CORS setup
+// app.use(cors({
+//   // origin: 'http://localhost:3000', // or your frontend URL
+//   // origin: 'https://the-paxful.netlify.app',
+//   origin: 'https://3.6.126.103:3000',
+//   credentials: false,
+// })); // CORS setup
+
+app.use(cors())
 app.use(express.json()); // Parse JSON bodies
 app.use(express.urlencoded({ extended: true })); // Parse URL-encoded bodies
 
